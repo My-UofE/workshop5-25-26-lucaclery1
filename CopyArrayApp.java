@@ -10,5 +10,15 @@ public class CopyArrayApp{
             myVals[i] = item;
         }
         System.out.println("original values: " + Arrays.toString(myVals));
+        ArrayList<Integer> uniqueVals = new ArrayList<>();
+        for (int i=0; i< nVals;i++) {
+            int item = Integer.parseInt(args[i]);
+            boolean check = True;
+            for (int j=uniqueVals.length; j<uniqueVals.length; j++) {
+                if (uniqueVals[j] == item) {
+                    uniqueVals.add(j) = item;
+                }
+            }
+        }
     }
 }
