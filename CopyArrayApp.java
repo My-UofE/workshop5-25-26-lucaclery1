@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 public class CopyArrayApp{
     public static void main(String[] args) {
         int nVals = args.length;
@@ -13,12 +14,16 @@ public class CopyArrayApp{
         ArrayList<Integer> uniqueVals = new ArrayList<>();
         for (int i=0; i< nVals;i++) {
             int item = Integer.parseInt(args[i]);
-            boolean check = True;
-            for (int j=uniqueVals.length; j<uniqueVals.length; j++) {
-                if (uniqueVals[j] == item) {
-                    uniqueVals.add(j) = item;
+            boolean check = true;
+            for (int j=0; j<uniqueVals.size(); j++) {
+                if (uniqueVals.get(j) == item) {
+                    check = false;
                 }
             }
+            if (check == true) {
+                uniqueVals.add(item);
+            }
         }
+        System.out.println("unique values: " + uniqueVals);
     }
 }
